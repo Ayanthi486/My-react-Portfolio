@@ -1,0 +1,139 @@
+#Intro { 
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;        
+    padding: 0 2rem;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.introContent {
+    max-width: 42rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1;
+    gap: 0.5rem;
+}
+
+.hello {
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+
+.introText {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.introName {
+    color: purple;
+}
+
+.introPara {
+    font-size: medium;
+    font-weight: 300;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+
+.desktopMenuBtn {
+    background: linear-gradient(135deg, #a855f7 0%, #6b21a8 100%); 
+    color: white;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    width: fit-content;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.6rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4); 
+    transition: all 0.3s ease; 
+}
+
+.desktopMenuBtn:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6); 
+    background: linear-gradient(135deg, #c084fc 0%, #7e22ce 100%);
+}
+
+.desktopMenuBtn:active {
+    transform: translateY(-1px);
+}
+
+.desktopMenuImg {
+    object-fit: cover;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.7rem;
+    filter: invert(1); 
+}
+
+.bg {
+    height: 80vh;
+    max-height: 35rem;
+    object-fit: cover;
+    border-radius: 20px;
+    
+    
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.5),               
+        0 0 40px rgba(168, 85, 247, 0.2);             
+        
+    border: 2px solid rgba(255, 255, 255, 0.1);      
+    transition: transform 0.5s ease;
+}
+
+.bg:hover {
+    transform: scale(1.02);
+}
+
+@media screen and (max-width: 840px) {
+    #Intro {
+        flex-direction: column-reverse; 
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+        height: auto;
+        padding: 4rem 2rem;
+    }
+
+    .introContent {
+        align-items: center;  
+    }
+
+    .introText {
+        font-size: 8vw;
+    }
+
+    .hello {
+        font-size: 4.5vw;
+    }
+
+    .bg {
+        height: 40vh;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .introText {
+        font-size: 9vw;
+    }
+    .bg {
+        height: 35vh;
+    }
+}
