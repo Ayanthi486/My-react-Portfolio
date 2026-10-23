@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     height: 5rem;
     width: 100vw;
     max-width: 75rem;
@@ -10,9 +10,9 @@
     position: sticky;
     top: 0;
     z-index: 3;
-        
 }
-.logo{
+
+.logo {
     width: 4rem;
     height: 3rem;
     object-fit: contain;
@@ -26,10 +26,9 @@
     align-items: center;
     gap: 3rem; 
     flex-grow: 1;
-    margin-right: 4rem; 
 }
 
-.desktopMenuListItem{
+.desktopMenuListItem {
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -38,12 +37,11 @@
     font-size: 1rem;
 }
 
-.desktopMenuListItem:hover{
+.desktopMenuListItem:hover {
     color: purple;
-    padding-bottom:1rem;
+    padding-bottom: 0.5rem;
     border-bottom: 3px solid purple;
 }
-
 
 .active {
     color: purple;
@@ -51,10 +49,38 @@
     border-bottom: 3px solid purple;
 }
 
+/* Download CV Button Styling (සුදු පාටින්) */
+.cvBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.cvBtn:hover {
+    background: white;
+    color: black;
+}
+
+.downloadIcon {
+    font-size: 1.1rem;
+}
+
 .mobMenu {
     display: none;
     object-fit: cover;
     height: 1.8rem;
+    cursor: pointer;
 }
 
 .navMenu {
@@ -65,7 +91,7 @@
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
-    height:fit-content;
+    height: fit-content;
     min-width: 15rem;
     background: rgb(40, 40, 40);
     border-radius: 1rem;
@@ -73,19 +99,27 @@
 
 .listItem {
     color: white;
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 2rem;
     margin: 0.25rem;
     background: rgb(30, 30, 30);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    text-align: center;
 }
 
-@media screen and (max-width:720px) {
+.listItem:hover {
+    color: purple;
+}
+
+/* Mobile Screen responsiveness */
+@media screen and (max-width: 720px) {
     .mobMenu {
         display: flex;
     }
     .desktopMenu {
         display: none;
     }
-    .desktopMenuBtn {
-        display: none;
+    .cvBtn {
+        display: none; /* Phone view එකේදී top bar එකේ button එක hide වේ */
     }
 }
